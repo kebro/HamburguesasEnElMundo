@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var mensajeHamburguesa: UILabel!
+    
     @IBOutlet weak var mensajePais: UILabel!
     
     let hamburguesa = ColeccionDeHamburguesa()
@@ -27,14 +29,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func implementaPaisBurguer() {
+    @IBAction func implementarPaisYBurguer() {
         mensajeHamburguesa.text = hamburguesa.obtenHamburguesa()
         mensajePais.text = pais.obtenPais()
         
         let colorAleatorio = colores.regresaColorAleatorio()
         view.backgroundColor = colorAleatorio
         view.tintColor = colorAleatorio
-        
     }
 }
 
